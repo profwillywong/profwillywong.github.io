@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Homepage</title>
+    <title>Willy Wong, Kyushu University</title>
     <style>
         /* Global styles */
         body {
@@ -31,19 +31,49 @@
             background-position: center;
         }
 
-        .header-content {
+          .header-content {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            font-size: 24px;
+            color: #212F3D;
+%            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             font-weight: bold;
+            text-align: left; /* Left justify the text */
+            padding: 20px;
+            width: 90%; /* Ensure content doesn't overflow on small screens */
+            max-width: 800px; /* Optional: limit the width */
         }
 
-        .header-content h1, .header-content p {
+        /* Title text (h1) */
+        .header-content h1 {
+            font-size: 2.5vw; /* Smaller font size for title */
             margin: 0;
+        }
+
+        /* Paragraph text */
+        .header-content p {
+            font-size: 1.5vw; /* Smaller font size for paragraph */
+            margin: 0;
+        }
+
+        /* Media queries for smaller screens (optional) */
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 4vw; /* Smaller font size for tablets */
+            }
+            .header-content p {
+                font-size: 2.5vw; /* Smaller text for tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-content h1 {
+                font-size: 5vw; /* Slightly larger font size for very small screens like phones */
+            }
+            .header-content p {
+                font-size: 3vw; /* Slightly larger text for mobile phones */
+            }
         }
 
         /* Language toggle switch */
@@ -94,7 +124,7 @@
         </div>
         <div class="header-content">
             <h1>Willy Wong</h1>
-            <p>Department of informatics, Faculty of Information Science and Electrical Engineering, Kyushu University</p>
+            <p>Department of Informatics, Faculty of Information Science and Electrical Engineering, Kyushu University</p>
         </div>
     </div>
 
@@ -103,7 +133,7 @@
         <div class="main-content">
             <h2>About me</h2>
             <p>
-                I am a full professor at Kyushu University working on neuroscience and neuroengineering.  Formerly, I was a professor at the University of Toronto (2000-2024).  I am a graduate of physics and biomedical engineering.
+                I am a full professor at Kyushu University working on theoretical and computational neuroscience/engineering.  Formerly, I was a professor at the University of Toronto from 2000 to 2024.  I graduated with degrees in physics and biomedical engineering.
             </p>
 
             <p>
@@ -114,37 +144,57 @@ Using algorithms, machine learning and AI to help detect, monitor and diagnose p
 
             <h3>2. Neural modelling</h3>
 
-Theory of neural information; developing neural firing models.
+Theory of neural information; developing and applying neural firing models.
 
                 
             </p>
 
             <h2>What we are known for</h2>
-            <p>
-                <b>A. Multidimensional Quest</b>: A generalization of the classic Quest algorithm for simultaneous determination of multiple thresholds using a Bayesian method. <br><br>
-                <b>B. Combining structural with functional data</b>: An auto-encoder method to combine objective imaging data with subjective performance-related data. <br><br>
-
-                <b>C. An inequality governing the response of sensory neurons</b>: The first ever mathematical inequality derived for neurons!  This inequality works universally across different sensory modalities and organisms from different phyla.<br><br>
-
-                <b>D. Remote monitoring of COVID-19</b>: My students and I had a part in helping Canada during the first wave of the SARS-CoV-1 pandemic in March 2020.<br><br>
-
-
-
-            </p>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    td {
+      padding: 10px;
+      text-align: left;
+    }
+    td img {
+      width: 250px; /* Adjust image size */
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td><b>A. An inequality governing the response of sensory neurons:</b> The first ever mathematical inequality derived for neurons!  This beautiful and elegant inequality works universally across different sensory modalities and organisms from different phyla.</td>
+      <td><a href="image1.jpg" target="_blank"><img src="image1.jpg" alt="Image 1"></a></td>
+    </tr>
+    <tr>
+      <td><b>B. Multidimensional Quest:</b> A generalization of the classic Quest algorithm for simultaneous determination of multiple thresholds using the Bayesian method.</td>
+      <td><a href="image2.jpg" target="_blank"><img src="image2.jpg" alt="Image 2"></a></td>
+    </tr>
+    <tr>
+      <td><b>C. Combining medical structural with functional data:</b> An auto-encoder method to combine objective imaging data with subjective performance-related data.</td>
+      <td><a href="image3.jpg" target="_blank"><img src="image3.jpg" alt="Image 3"></a></td>
+    </tr>
+  </table>
 
             <h2>Do you like math?</h2>
             <p>
-                If so, try proving the following inequality:<br>
+                If so, try proving the following inequality:<br><br>
 <object data="inequality.svg"> </object></span>
             </p>
 
 
-            <h2>How to contact me</h2>
+            <h2>Contact</h2>
             <p>
                 Department of Informatics, Faculty of Information Science and Electrical Engineering<br>
 Kyushu University, 744 Motooka Nishi-ku Fukuoka 819-0395, Japan <br>
-Office: 108-2 (Open Learning Plaza)<br>
-E-mail me at: prof [dot] willy [dot] wong [at] icloud [dot] com
+<b>Office:</b>108-2 (Open Learning Plaza) <a href="https://www.kyushu-u.ac.jp/f/34211/20181001ito_en.pdf">Open map and look for "36".</a><br>
+<b>E-mail me at:</b> 16-18-15-6-4-15-20-23-9-12-12-25-4-15-20-23-15-14-7-1-20-9-3-12-15-21-4-4-15-20-3-15-13 <br>
+(Use a simple number-alphabet cypher to decode it!)
             </p>
 
             
