@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Willy Wong, Kyushu University</title>
+    <title>Bilingual Webpage</title>
     <style>
         body {
             font-family: Verdana, sans-serif;
@@ -37,8 +37,14 @@
 
         header .overlay h1,
         header .overlay h2 {
-            margin: 0;
-        }
+    		margin: 0;
+    		font-size: calc(4vw + 10px); /* Responsive font size */
+		line-height: 1.2;
+    		max-width: 90%; /* Prevent overflow on small screens */
+    		word-wrap: break-word;
+    		text-align: center;
+	}
+
 
         .language-toggle {
             position: absolute;
@@ -132,11 +138,7 @@
 
 <header>
     <img src="ai.jpg" alt="Top Image">
-    <div class="overlay" id="header-content">
-        <!-- English header by default -->
-        <h1>Willy Wong</h1>
-        <h2>Department of Informatics, Faculty of Information Science and Electrical Engineering, Kyushu University</h2>
-    </div>
+    <div class="overlay" id="header-content"></div>
     <div class="language-toggle">
         <img src="canada-flag.png" alt="English" id="english-btn">
         <img src="japan-flag.png" alt="日本語" id="japanese-btn">
