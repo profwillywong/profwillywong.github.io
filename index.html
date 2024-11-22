@@ -40,20 +40,6 @@
             margin: 0;
         }
 
-        .language-toggle {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            display: flex;
-            gap: 10px;
-        }
-
-        .language-toggle img {
-            width: 40px;
-            height: 20px;
-            cursor: pointer;
-        }
-
         .content-container {
             background-color: white;
             width: 66%;
@@ -120,162 +106,73 @@
             .content-container {
                 width: 90%;
             }
-
-            .language-toggle img {
-                width: 25px;
-                height: 15px;
-            }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="language-toggle">
-        <img src="canada-flag.png" alt="English" id="english-btn">
-        <img src="japan-flag.png" alt="日本語" id="japanese-btn">
-    </div>
-
-    <!-- Top image (fixed) -->
     <img src="header.jpg" alt="Top Image" class="top-image">
 </header>
 
 <div class="content-container">
-    <!-- English Content -->
-    <div id="english-content">
-        <p class="aboutme">
-            <h2>About me</h2>
-            <p>
-                I am a professor at Kyushu University working on theoretical and computational neuroscience/engineering.  Formerly, I was a professor at the University of Toronto from 2000 to 2024.  I graduated with degrees in physics and biomedical engineering.
-            </p>
+    <p class="aboutme">
+        <h2>About me</h2>
+        <p>
+            I am a professor at Kyushu University working on theoretical and computational neuroscience/engineering. Formerly, I was a professor at the University of Toronto from 2000 to 2024. I graduated with degrees in physics and biomedical engineering.
         </p>
-        <p class="researchinterest">
-            <h2>Research interests</h2>
-            <p>
-                <h3>1. Diagnostics for sensory impairment</h3>
-                Using algorithms, machine learning and AI to help detect, monitor and diagnose problems in hearing and vision.
-            </p>
-            <p>
-                <h3>2. Neural modelling</h3>
-                Theory of neural information; developing and applying neural firing models.
-            </p>
+    </p>
+    <p class="researchinterest">
+        <h2>Research interests</h2>
+        <p>
+            <h3>1. Diagnostics for sensory impairment</h3>
+            Using algorithms, machine learning, and AI to help detect, monitor, and diagnose problems in hearing and vision.
         </p>
+        <p>
+            <h3>2. Neural modelling</h3>
+            Theory of neural information; developing and applying neural firing models.
+        </p>
+    </p>
 
-        <p class="whatweareknownfor">
-            <h2>What we are known for</h2>
-            <div class="table-container">
-                <div class="table-row">
-                    <div><b>A. An inequality governing the response of sensory neurons:</b> The first ever mathematical inequality derived for neurons!  This beautiful and elegant inequality works universally across different sensory modalities and organisms from different phyla.</div>
-                    <div><img src="image1.jpg" alt="Image 1"></div>
-                </div>
-                <div class="table-row">
-                    <div><b>B. Multidimensional Quest:</b> A generalization of the classic Quest algorithm for simultaneous determination of multiple thresholds using the Bayesian method.</div>
-                    <div><img src="image2.jpg" alt="Image 2"></div>
-                </div>
-                <div class="table-row">
-                    <div><b>C. Combining medical structural with functional data:</b> An auto-encoder method to combine objective imaging data with subjective performance-related data.</div>
-                    <div><img src="image3.jpg" alt="Image 3"></div>
-                </div>
+    <p class="whatweareknownfor">
+        <h2>What we are known for</h2>
+        <div class="table-container">
+            <div class="table-row">
+                <div><b>A. An inequality governing the response of sensory neurons:</b> The first-ever mathematical inequality derived for neurons! This beautiful and elegant inequality works universally across different sensory modalities and organisms from different phyla.</div>
+                <div><img src="image1.jpg" alt="Image 1"></div>
             </div>
-        </p>
-
-        <p class="whatweareknownfor">
-            <h2>Do you like math?</h2>
-            <p>
-                If so, try proving the following inequality:<br>
-            </p>
-            <div class="centered-image">
-                <img src="inequality.svg" alt="Centered Research Image">
+            <div class="table-row">
+                <div><b>B. Multidimensional Quest:</b> A generalization of the classic Quest algorithm for simultaneous determination of multiple thresholds using the Bayesian method.</div>
+                <div><img src="image2.jpg" alt="Image 2"></div>
             </div>
-        </p>
-
-        <p class="contact">
-            <h2>Contact</h2>
-            <p>
-                Department of Informatics, Faculty of Information Science and Electrical Engineering<br>
-                Kyushu University, 744 Motooka Nishi-ku Fukuoka 819-0395, Japan <br>
-                <b>Office:</b>108-2 (Open Learning Plaza) <a href="https://www.kyushu-u.ac.jp/f/34211/20181001ito_en.pdf">Open map and look for "36".</a><br>
-                <b>E-mail me at:</b> 16-18-15-6-4-15-20-23-9-12-12-25-4-15-20-23-15-14-7-1-20-9-3-12-15-21-4-4-15-20-3-15-13 <br>
-                (Use a simple number-alphabet cypher to decode it!)
-            </p>
-        </p>
-    </div>
-
-    <!-- Japanese Content -->
-    <div id="japanese-content" style="display: none;">
-         <p class="aboutme">
-            <h2>私について</h2>
-            <p>
-                私は九州大学のフルプロフェッサーで、理論的および計算神経科学/工学に関する研究を行っています。以前は、2000年から2024年までトロント大学の教授を務めていました。物理学と生体医工学の学位を取得しています。
-            </p>
-        </p>
-        <p class="researchinterest">
-            <h2>研究の興味</h2>
-            <p>
-                <h3>1. 感覚障害の診断"</h3>
-                アルゴリズム、機械学習、AIを活用して、聴覚と視覚の問題を検出、監視、診断する手助けを行っています。
-            </p>
-            <p>
-                <h3>2. 神経モデル</h3>
-                神経情報の理論；神経発火モデルの開発と適用。
-            </p>
-        </p>
-
-        <p class="whatweareknownfor">
-            <h2>私たちの特徴</h2>
-            <div class="table-container">
-                <div class="table-row">
-                    <div><b>A. 感覚ニューロンの反応を支配する不等式：</b> ニューロンに対して導かれた初の数学的不等式！ この美しくエレガントな不等式は、異なる感覚モダリティや異なる門に属する生物において普遍的に機能します。</div>
-                    <div><img src="image1.jpg" alt="Image 1"></div>
-                </div>
-                <div class="table-row">
-                    <div><b>B. 多次元クエスト：</b> ベイジアン法を用いて複数の閾値を同時に決定するための、クラシックなクエストアルゴリズムの一般化。</div>
-                    <div><img src="image2.jpg" alt="Image 2"></div>
-                </div>
-                <div class="table-row">
-                    <div><b>医療的構造データと機能的データの統合：</b> 客観的な画像データと主観的なパフォーマンス関連データを統合するためのオートエンコーダ法。</div>
-                    <div><img src="image3.jpg" alt="Image 3"></div>
-                </div>
+            <div class="table-row">
+                <div><b>C. Combining medical structural with functional data:</b> An auto-encoder method to combine objective imaging data with subjective performance-related data.</div>
+                <div><img src="image3.jpg" alt="Image 3"></div>
             </div>
-        </p>
+        </div>
+    </p>
 
-        <p class="whatweareknownfor">
-            <h2>数学は好きですか？</h2>
-            <p>
-                もしそうなら、次の不等式を証明してみてください：<br>
-            </p>
-            <div class="centered-image">
-                <img src="inequality.svg" alt="Centered Research Image">
-            </div>
+    <p class="whatweareknownfor">
+        <h2>Do you like math?</h2>
+        <p>
+            If so, try proving the following inequality:<br>
         </p>
+        <div class="centered-image">
+            <img src="inequality.svg" alt="Centered Research Image">
+        </div>
+    </p>
 
-        <p class="contact">
-            <h2>Contact</h2>
-            <p>
-                〒819-0395福岡市西区元岡744九州大学<br>
-                <b>オフィス:</b>総合学習108-2 <a href="https://www.kyushu-u.ac.jp/f/34211/20181001ito_en.pdf">マップで36を探す.</a><br>
-                <b>電子メール:</b> 16-18-15-6-4-15-20-23-9-12-12-25-4-15-20-23-15-14-7-1-20-9-3-12-15-21-4-4-15-20-3-15-13 <br>
-                (簡単な数字とアルファベットの暗号を使って解読してください！)
-            </p>
+    <p class="contact">
+        <h2>Contact</h2>
+        <p>
+            Department of Informatics, Faculty of Information Science and Electrical Engineering<br>
+            Kyushu University, 744 Motooka Nishi-ku Fukuoka 819-0395, Japan <br>
+            <b>Office:</b> 108-2 (Open Learning Plaza) <a href="https://www.kyushu-u.ac.jp/f/34211/20181001ito_en.pdf">Open map and look for "36".</a><br>
+            <b>E-mail me at:</b> 16-18-15-6-4-15-20-23-9-12-12-25-4-15-20-23-15-14-7-1-20-9-3-12-15-21-4-4-15-20-3-15-13 <br>
+            (Use a simple number-alphabet cipher to decode it!)
         </p>
-    </div>
+    </p>
 </div>
-
-<script>
-    // Toggle between English and Japanese content
-    document.getElementById('english-btn').addEventListener('click', () => {
-        document.getElementById('english-content').style.display = 'block';
-        document.getElementById('japanese-content').style.display = 'none';
-        
-        
-    });
-
-    document.getElementById('japanese-btn').addEventListener('click', () => {
-        document.getElementById('english-content').style.display = 'none';
-        document.getElementById('japanese-content').style.display = 'block';
-        
-    });
-</script>
 
 </body>
 </html>
