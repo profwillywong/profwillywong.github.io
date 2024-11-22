@@ -3,141 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Willy Wong, Kyushu University</title>
     <style>
-        /* Global styles */
         body {
             font-family: Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
+            line-height: 1.6;
+            background-color: #f4f4f9;
         }
 
-        .container {
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Header section with image and text */
-        .header {
+        header {
             position: relative;
-            width: 100%;
-            height: 300px;
-            background-image: url('ai.jpg'); /* Replace with your image path */
-            background-size: cover;
-            background-position: center;
+            text-align: center;
         }
 
-          .header-content {
+        header img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        header .overlay {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: #212F3D;
-%            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            font-weight: bold;
-            text-align: left; /* Left justify the text */
-            padding: 20px;
-            width: 90%; /* Ensure content doesn't overflow on small screens */
-            max-width: 800px; /* Optional: limit the width */
+            color: black;
+            text-align: left;
+            padding: 10px;
         }
 
-        /* Title text (h1) */
-        .header-content h1 {
-            font-size: 2.5vw; /* Smaller font size for title */
+        header .overlay h1,
+        header .overlay h2 {
             margin: 0;
         }
 
-        /* Paragraph text */
-        .header-content p {
-            font-size: 1.5vw; /* Smaller font size for paragraph */
-            margin: 0;
-        }
-
-        /* Media queries for smaller screens (optional) */
-        @media (max-width: 768px) {
-            .header-content h1 {
-                font-size: 4vw; /* Smaller font size for tablets */
-            }
-            .header-content p {
-                font-size: 2.5vw; /* Smaller text for tablets */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header-content h1 {
-                font-size: 5vw; /* Slightly larger font size for very small screens like phones */
-            }
-            .header-content p {
-                font-size: 3vw; /* Slightly larger text for mobile phones */
-            }
-        }
-
-        /* Language toggle switch */
         .language-toggle {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 10px;
         }
 
-        /* Toggle style */
-        .language-toggle select {
-            padding: 5px 10px;
-            font-size: 16px;
-            background-color: white;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+        .language-toggle img {
+            width: 40px;
+            height: 20px;
+            cursor: pointer;
         }
 
-        /* Main content */
-        .main-content {
+        .content-container {
             background-color: white;
-            padding: 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 66%;
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .description {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .centered-image {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .centered-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .table-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
             margin-top: 20px;
-            border-radius: 8px;
         }
 
-        .main-content h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
+        .table-row {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
         }
 
-        .main-content p {
-            font-size: 16px;
-            line-height: 1.6;
+        .table-row div {
+            flex: 1;
+            margin: 5px;
+            text-align: center;
+        }
+
+        .table-row div:first-child {
+	    text-align: left;
+	}
+
+	.table-row img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 600px) {
+            .table-row {
+                flex-direction: column;
+            }
+
+            .content-container {
+                width: 90%;
+            }
+
+            .language-toggle img {
+                width: 25px;
+                height: 15px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <div class="header">
-        <div class="language-toggle">
-            <select onchange="changeLanguage(this.value)">
-                <option value="en">English</option>
-                <option value="ja">日本語</option>
-            </select>
-        </div>
-        <div class="header-content">
-            <h1>Willy Wong</h1>
-            <p>Department of Informatics, Faculty of Information Science and Electrical Engineering, Kyushu University</p>
-        </div>
+<header>
+    <img src="ai.jpg" alt="Top Image">
+    <div class="overlay" id="header-content">
+        <!-- English header by default -->
+        <h1>Willy Wong</h1>
+        <h2>Department of Informatics, Faculty of Information Science and Electrical Engineering, Kyushu University</h2>
     </div>
+    <div class="language-toggle">
+        <img src="canada-flag.png" alt="English" id="english-btn">
+        <img src="japan-flag.png" alt="日本語" id="japanese-btn">
+    </div>
+</header>
 
-    <!-- Main Content Section -->
-    <div class="container">
-        <div class="main-content">
+<div class="content-container">
+    <!-- English Content -->
+    <div id="english-content">
+        <p class="aboutme">
             <h2>About me</h2>
             <p>
                 I am a full professor at Kyushu University working on theoretical and computational neuroscience/engineering.  Formerly, I was a professor at the University of Toronto from 2000 to 2024.  I graduated with degrees in physics and biomedical engineering.
             </p>
-
-            <p>
+        </p>
+        <p class="researchinterest">
             <h2>Research interests</h2>
+            <p>
             <h3>1. Diagnostics for sensory impairment</h3>
 Using algorithms, machine learning and AI to help detect, monitor and diagnose problems in hearing and vision.
 
@@ -145,81 +162,104 @@ Using algorithms, machine learning and AI to help detect, monitor and diagnose p
             <h3>2. Neural modelling</h3>
 
 Theory of neural information; developing and applying neural firing models.
-
-                
             </p>
+        </p>
 
+        <p class="whatweareknownfor">
             <h2>What we are known for</h2>
-  <style>
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    td {
-      padding: 10px;
-      text-align: left;
-    }
-    td img {
-      width: 250px; /* Adjust image size */
-      height: auto;
-    }
-  </style>
-</head>
-<body>
-  <table>
-    <tr>
-      <td><b>A. An inequality governing the response of sensory neurons:</b> The first ever mathematical inequality derived for neurons!  This beautiful and elegant inequality works universally across different sensory modalities and organisms from different phyla.</td>
-      <td><a href="image1.jpg" target="_blank"><img src="image1.jpg" alt="Image 1"></a></td>
-    </tr>
-    <tr>
-      <td><b>B. Multidimensional Quest:</b> A generalization of the classic Quest algorithm for simultaneous determination of multiple thresholds using the Bayesian method.</td>
-      <td><a href="image2.jpg" target="_blank"><img src="image2.jpg" alt="Image 2"></a></td>
-    </tr>
-    <tr>
-      <td><b>C. Combining medical structural with functional data:</b> An auto-encoder method to combine objective imaging data with subjective performance-related data.</td>
-      <td><a href="image3.jpg" target="_blank"><img src="image3.jpg" alt="Image 3"></a></td>
-    </tr>
-  </table>
+        <div class="table-container">
+            <div class="table-row">
+                <div><b>A. An inequality governing the response of sensory neurons:</b> The first ever mathematical inequality derived for neurons!  This beautiful and elegant inequality works universally across different sensory modalities and organisms from different phyla.</div>
+                <div><img src="image1.jpg" alt="Image 1"></div>
+            </div>
+            <div class="table-row">
+                <div><b>B. Multidimensional Quest:</b> A generalization of the classic Quest algorithm for simultaneous determination of multiple thresholds using the Bayesian method.</div>
+                <div><img src="image2.jpg" alt="Image 2"></div>
+            </div>
+            <div class="table-row">
+                <div><b>C. Combining medical structural with functional data:</b> An auto-encoder method to combine objective imaging data with subjective performance-related data.</div>
+                <div><img src="image3.jpg" alt="Image 3"></div>
+            </div>
+        </div>
+        </p>
+
+        <p class="whatweareknownfor">
 
             <h2>Do you like math?</h2>
             <p>
-                If so, try proving the following inequality:<br><br>
-<object data="inequality.svg"> </object></span>
-            </p>
+                If so, try proving the following inequality:<br>
+	    </p>
+        	<div class="centered-image">
+	            <img src="inequality.svg" alt="Centered Research Image">
+        	</div>
+	</p>
 
-
+        <p class="contact">
             <h2>Contact</h2>
             <p>
-                Department of Informatics, Faculty of Information Science and Electrical Engineering<br>
+               Department of Informatics, Faculty of Information Science and Electrical Engineering<br>
 Kyushu University, 744 Motooka Nishi-ku Fukuoka 819-0395, Japan <br>
 <b>Office:</b>108-2 (Open Learning Plaza) <a href="https://www.kyushu-u.ac.jp/f/34211/20181001ito_en.pdf">Open map and look for "36".</a><br>
 <b>E-mail me at:</b> 16-18-15-6-4-15-20-23-9-12-12-25-4-15-20-23-15-14-7-1-20-9-3-12-15-21-4-4-15-20-3-15-13 <br>
 (Use a simple number-alphabet cypher to decode it!)
             </p>
+        </p>
 
-            
-        </div>
     </div>
 
-    <script>
-        // Simple language toggle function (you can expand this later)
-        function changeLanguage(lang) {
-            if (lang === 'ja') {
-                document.querySelector('.header-content h1').textContent = 'あなたの名前';
-                document.querySelector('.header-content p').textContent = 'あなたの所属';
-                document.querySelector('.main-content h2').textContent = '自己紹介';
-                document.querySelectorAll('.main-content p')[0].textContent = 'ここにあなたの所属や経歴などの簡単な紹介を書いてください。';
-                document.querySelectorAll('.main-content h2')[1].textContent = '研究分野';
-                document.querySelectorAll('.main-content p')[1].textContent = 'あなたの研究領域やプロジェクトについて書いてください。';
-            } else {
-                document.querySelector('.header-content h1').textContent = 'Your Name';
-                document.querySelector('.header-content p').textContent = 'Your Affiliation';
-                document.querySelector('.main-content h2').textContent = 'About Me';
-                document.querySelectorAll('.main-content p')[0].textContent = 'This is a brief description of your affiliation, background, and any important details you\'d like to share.';
-                document.querySelectorAll('.main-content h2')[1].textContent = 'Research Interests';
-                document.querySelectorAll('.main-content p')[1].textContent = 'Here, you can describe your main research areas, projects, or any topics you\'re passionate about.';
-            }
-        }
-    </script>
+    <!-- Japanese Content -->
+    <div id="japanese-content" style="display: none;">
+        <p class="aboutme">
+            私の研究の関心は[研究トピックを挿入]を理解することに焦点を当てています。
+            [関連分野や目標を挿入]に関連するプロジェクトに取り組んでいます。
+        </p>
+
+        <!-- Centered Image -->
+        <div class="centered-image">
+            <img src="centered-image.jpg" alt="研究の中心画像">
+        </div>
+
+        <div class="table-container">
+            <div class="table-row">
+                <div>テキスト 1</div>
+                <div><img src="image1.jpg" alt="画像 1"></div>
+            </div>
+            <div class="table-row">
+                <div>テキスト 2</div>
+                <div><img src="image2.jpg" alt="画像 2"></div>
+            </div>
+            <div class="table-row">
+                <div>テキスト 3</div>
+                <div><img src="image3.jpg" alt="画像 3"></div>
+            </div>
+            <div class="table-row">
+                <div>テキスト 4</div>
+                <div><img src="image4.jpg" alt="画像 4"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Toggle between English and Japanese content
+    document.getElementById('english-btn').addEventListener('click', () => {
+        document.getElementById('english-content').style.display = 'block';
+        document.getElementById('japanese-content').style.display = 'none';
+        document.getElementById('header-content').innerHTML = `
+            <h1>Willy Wong</h1>
+            <h2>Department of Informatics, Faculty of Information Science and Electrical Engineering, Kyushu University</h2>
+        `;
+    });
+
+    document.getElementById('japanese-btn').addEventListener('click', () => {
+        document.getElementById('english-content').style.display = 'none';
+        document.getElementById('japanese-content').style.display = 'block';
+        document.getElementById('header-content').innerHTML = `
+            <h1>あなたの名前</h1>
+            <h2>あなたの所属</h2>
+        `;
+    });
+</script>
+
 </body>
 </html>
