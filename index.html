@@ -1,13 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Willy Wong, Kyushu University</title>
     <style>
         body {
             font-family: Verdana, sans-serif;
-	    color: #4d4d4d;
+            color: #4d4d4d;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -51,11 +52,11 @@
             border-radius: 10px;
         }
 
-	@media (max-width: 1000px) {
-	    .content-container {
-	    margin: 0px auto; /* Adjust for smartphones */
-	    }
-	}
+        @media (max-width: 1000px) {
+            .content-container {
+                margin: 0px auto;
+            }
+        }
 
         .description {
             text-align: center;
@@ -88,6 +89,7 @@
             justify-content: space-between;
             border-bottom: 1px solid #ccc;
             padding: 10px 0;
+            text-align: left !important; /* FIX: prevents unwanted centering */
         }
 
         .table-row div {
@@ -114,6 +116,19 @@
                 width: 90%;
             }
         }
+
+        /* --- SIMPLE FIX FOR ROW 4 IMAGE --- */
+        .float-right-img {
+            float: right;
+            width: 120px;
+            margin-left: 15px;
+            margin-bottom: 10px;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        /* ----------------------------------- */
+
     </style>
 </head>
 <body>
@@ -142,8 +157,9 @@
     </p>
 
     <p class="whatweareknownfor">
-	<h2>What we are known for</h2>
+    <h2>What we are known for</h2>
 <div class="table-container">
+
     <!-- Row 1 -->
     <div class="table-row">
         <div><b>A. An inequality governing the response of sensory neurons:</b> The first-ever mathematical inequality derived for neurons! This beautiful and elegant inequality works universally across different sensory modalities and organisms from different phyla. Data is from single unit auditory fibre (Westerman and Smith, 1984).  Click on the image to see more data.</div>
@@ -153,6 +169,7 @@
             </a>
         </div>
     </div>
+
     <!-- Row 2 -->
     <div class="table-row">
         <div><b>B. Multidimensional Quest:</b> A generalization of the classic Quest algorithm for simultaneous determination of multiple thresholds using the Bayesian method called TORONTO.  Click on the image to see TORONTO conduct 24-2 visual field testing.</div>
@@ -162,6 +179,7 @@
             </a>
         </div>
     </div>
+
     <!-- Row 3 -->
     <div class="table-row">
         <div><b>C. Combining medical structural with functional data:</b> An auto-encoder method to combine objective imaging data with subjective performance-related data.  Click on the image to see a larger version of how the auto-encoder uses optical coherence tomography retinal thickness data (RNFL) to create a less noisy visual field (VF) representation.</div>
@@ -171,27 +189,27 @@
             </a>
         </div>
     </div>
-<!-- Row 4 -->
-<div class="table-row">
-    <div style="position: relative;">
-        <img src="image4.jpg" 
-             alt="Thumbnail 4"
-             style="float:right; width:120px; margin:0 0 10px 15px;">
 
-        <b>D. An informational "second law":</b> 
-        A more fundamental problem, and a question I have struggled with since I was an undergraduate student. 
-        I am interested in the processing of information by sensory systems. Does sensory information obey an 
-		inequality in the same way thermodynamic entropy is constrained by the second law? You can see an arXiv preprint of a paper I wrote 
-        <a href="http://arxiv.org/abs/2511.11463"><span class="s3">here</span></a>.
+    <!-- Row 4 (FIXED) -->
+    <div class="table-row">
+        <div style="position: relative;">
+            <img src="image4.jpg" alt="Thumbnail 4" class="float-right-img">
+
+            <b>D. An informational "second law":</b> 
+            A more fundamental problem, and a question I have struggled with since I was an undergraduate student. 
+            I am interested in the processing of information by sensory systems. Does sensory information obey an 
+            inequality in the same way thermodynamic entropy is constrained by the second law? You can see an arXiv 
+            preprint of a paper I wrote 
+            <a href="http://arxiv.org/abs/2511.11463"><span class="s3">here</span></a>.
+        </div>
     </div>
+
 </div>
     </p>
 
     <p class="whatweareknownfor">
         <h2>Do you like math?</h2>
-        <p>
-            If so, try proving the following inequality:<br>
-        </p>
+        <p>If so, try proving the following inequality:</p>
         <div class="centered-image">
             <img src="inequality.svg" alt="Centered Research Image">
         </div>
@@ -202,18 +220,16 @@
 <a href="https://scholar.google.com/citations?hl=en&user=WSu0bIMAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a><br>
 <a href="https://researchmap.jp/willywong?lang=en">researchmap</a><br>
 <a href="https://hyoka.ofc.kyushu-u.ac.jp/html/100025807_en.html">Kyushu University</a><br>
-
     </p>
-
 
     <p class="contact">
         <h2>Contact</h2>
         <p>
             Department of Informatics, Faculty of Information Science and Electrical Engineering, Kyushu University, 744 Motooka Nishi-ku Fukuoka 819-0395, Japan <br><br>
             <b>Office:</b> West Zone 2, room 858 <a href="https://www.kyushu-u.ac.jp/f/34211/20181001ito_en.pdf">(#31 on map)</a><br>
-			<b>Lab:</b> West Zone 2, room 827 <a href="https://www.kyushu-u.ac.jp/f/34211/20181001ito_en.pdf">(#31 on map)</a><br>
+            <b>Lab:</b> West Zone 2, room 827 <a href="https://www.kyushu-u.ac.jp/f/34211/20181001ito_en.pdf">(#31 on map)</a><br>
             <b>E-mail me at:</b> 16-18-15-6-4-15-20-23-9-12-12-25-4-15-20-23-15-14-7-1-20-9-3-12-15-21-4-4-15-20-3-15-13 <br>
-        	(Use a simple number-alphabet cipher to decode it!)
+            (Use a simple number-alphabet cipher to decode it!)
         </p>
     </p>
 </div>
